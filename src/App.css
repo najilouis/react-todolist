@@ -30,3 +30,8 @@ a {
 .btn:hover {
   background: #666;
 }
+
+.loading {
+  text-align: center;
+  padding: 1rem;
+}

@@ -8,6 +8,9 @@ export class TodoItem extends Component {
       padding: "10px",
       borderBottom: "1px #ccc dotted",
       backgroundColor: "#f4f4f4",
+      display: "flex",
+      width: "100%",
+      alignItems: "center",
     };
   };
 
@@ -32,7 +35,7 @@ export class TodoItem extends Component {
           onChange={this.props.markComplete.bind(this, id)}
         />{" "}
         {/* <p>{this.props.todo.title}</p> */}
-        {title}
+        <div style={{ flex: "1", margin: "auto 5px" }}>{title}</div>
         <button onClick={this.props.delTodo.bind(this, id)} style={btnStyle}>
           X
         </button>
@@ -44,6 +47,8 @@ export class TodoItem extends Component {
 TodoItem.propTypes = {
   // for props type validation
   todo: PropTypes.object.isRequired,
+  markComplete: PropTypes.func.isRequired,
+  delTodo: PropTypes.func.isRequired,
 };
 
 // const itemStyle = { // used for METHOD #2
